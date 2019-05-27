@@ -64,4 +64,9 @@ The script takes three arguments:
 3. `OUTFILE`: The location of the repacked APK.
 
 The `debugger/vscode/` directory contains config files for Visual Studio Code
-that can be used to connect to the debugger.
+that can be used to connect to the debugger. You will also need to use `adb`
+to port forward the debugger port to your host machine.
+
+```shell
+adb forward tcp:9222 tcp:9222
+```
